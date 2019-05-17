@@ -12,6 +12,7 @@ import com.example.viewpagerapikotlin.retrofit.ImgModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,6 +34,8 @@ class MainActivity : AppCompatActivity() {
 
             override fun onResponse(call: Call<List<ImgModel>>, response: Response<List<ImgModel>>) {
                 val listImage = response.body()
+
+                Log.d("oke", "response: ${listImage?.get(0)?.title}")
 
                 setViewPagerItems(listImage)
             }

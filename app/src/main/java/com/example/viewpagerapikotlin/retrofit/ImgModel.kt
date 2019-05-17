@@ -2,4 +2,4 @@ package com.example.viewpagerapikotlin.retrofit
 
 import com.google.gson.annotations.SerializedName
 
-data class ImgModel(@SerializedName("img") val img: String)
+data class ImgModel(@SerializedName("img") val img: String, @SerializedName("title") val title: String)
